@@ -410,6 +410,19 @@ MonoBehaviour:
   multiplierThresholds: 040000000800000010000000
   scoreText: {fileID: 1791990394}
   multiText: {fileID: 2046179001}
+  totalNotes: 0
+  normalHits: 0
+  goodHits: 0
+  perfectHits: 0
+  missedHits: 0
+  resultsScreen: {fileID: 766832845}
+  percentHitText: {fileID: 1903861623}
+  normalsText: {fileID: 1991264647}
+  goodsText: {fileID: 1982387921}
+  perfectsText: {fileID: 723331160}
+  missesText: {fileID: 325538177}
+  rankText: {fileID: 1294892955}
+  finalScoreText: {fileID: 745663033}
 --- !u!4 &222328728
 Transform:
   m_ObjectHideFlags: 0
@@ -1670,7 +1683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &766832846
 RectTransform:
   m_ObjectHideFlags: 0
