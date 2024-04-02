@@ -401,6 +401,15 @@ MonoBehaviour:
   theMusic: {fileID: 222328726}
   startPlaying: 0
   theBS: {fileID: 1312876730}
+  currentScore: 0
+  scorePerNote: 100
+  scorePerGoodNote: 125
+  scorePerPerfectNote: 150
+  currentMultiplier: 1
+  multiplierTracker: 0
+  multiplierThresholds: 040000000800000010000000
+  scoreText: {fileID: 1791990394}
+  multiText: {fileID: 2046179001}
 --- !u!4 &222328728
 Transform:
   m_ObjectHideFlags: 0
@@ -1052,6 +1061,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 274
+  hitEffect: {fileID: 7540836003287623164, guid: 61b01d869c862454da876b5e44d9b3df, type: 3}
+  goodEffect: {fileID: 6640263803604108582, guid: 876a44f701236428f841478fadccd92e, type: 3}
+  perfectEffect: {fileID: 2744967873215407438, guid: 8216680b8f9e445738f4d9ae12d9b599, type: 3}
+  missEffect: {fileID: 1669508570584297714, guid: 34db0b9364f9646c09c7e880c1c31c95, type: 3}
 --- !u!1 &515992356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1341,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 273
+  hitEffect: {fileID: 7540836003287623164, guid: 61b01d869c862454da876b5e44d9b3df, type: 3}
+  goodEffect: {fileID: 6640263803604108582, guid: 876a44f701236428f841478fadccd92e, type: 3}
+  perfectEffect: {fileID: 2744967873215407438, guid: 8216680b8f9e445738f4d9ae12d9b599, type: 3}
+  missEffect: {fileID: 1669508570584297714, guid: 34db0b9364f9646c09c7e880c1c31c95, type: 3}
 --- !u!212 &663978831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1923,6 +1940,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 276
+  hitEffect: {fileID: 7540836003287623164, guid: 61b01d869c862454da876b5e44d9b3df, type: 3}
+  goodEffect: {fileID: 6640263803604108582, guid: 876a44f701236428f841478fadccd92e, type: 3}
+  perfectEffect: {fileID: 2744967873215407438, guid: 8216680b8f9e445738f4d9ae12d9b599, type: 3}
+  missEffect: {fileID: 1669508570584297714, guid: 34db0b9364f9646c09c7e880c1c31c95, type: 3}
 --- !u!1 &1160336783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,7 +2333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1605572179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,6 +2551,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 275
+  hitEffect: {fileID: 7540836003287623164, guid: 61b01d869c862454da876b5e44d9b3df, type: 3}
+  goodEffect: {fileID: 6640263803604108582, guid: 876a44f701236428f841478fadccd92e, type: 3}
+  perfectEffect: {fileID: 2744967873215407438, guid: 8216680b8f9e445738f4d9ae12d9b599, type: 3}
+  missEffect: {fileID: 1669508570584297714, guid: 34db0b9364f9646c09c7e880c1c31c95, type: 3}
 --- !u!212 &1674003065
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2698,6 +2723,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 276
+  hitEffect: {fileID: 7540836003287623164, guid: 61b01d869c862454da876b5e44d9b3df, type: 3}
+  goodEffect: {fileID: 6640263803604108582, guid: 876a44f701236428f841478fadccd92e, type: 3}
+  perfectEffect: {fileID: 2744967873215407438, guid: 8216680b8f9e445738f4d9ae12d9b599, type: 3}
+  missEffect: {fileID: 1669508570584297714, guid: 34db0b9364f9646c09c7e880c1c31c95, type: 3}
 --- !u!1 &1791990392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -645, y: -376}
+  m_AnchoredPosition: {x: -645, y: -340}
   m_SizeDelta: {x: 560.4, y: 164.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791990394
@@ -3442,7 +3471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -645, y: -432}
+  m_AnchoredPosition: {x: -645, y: -396}
   m_SizeDelta: {x: 560.4, y: 164.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046179001
