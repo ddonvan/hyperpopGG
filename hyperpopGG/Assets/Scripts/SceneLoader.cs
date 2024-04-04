@@ -11,4 +11,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    public void LoadSelectScene()
+    {
+        SceneManager.LoadScene("SongSelection");
+    }
+
 }
