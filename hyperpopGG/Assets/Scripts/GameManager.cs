@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text multiText;
+    public Text kandiText;
+    public int currentKandi;
 
     public float totalNotes;
     public float normalHits;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        kandiText.text = "Kandi: x0";
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
 
@@ -101,6 +104,12 @@ public class GameManager : MonoBehaviour
                 finalScoreText.text = currentScore.ToString();
             }
         }
+    }
+
+    public void KandiHit()
+    {
+        currentKandi += 1;
+        kandiText.text = "Kandi: x" + currentKandi;
     }
 
     public void NoteHit()
