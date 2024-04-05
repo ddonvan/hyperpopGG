@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,8 +32,10 @@ public class GameManager : MonoBehaviour
     public float perfectHits;
     public float missedHits;
 
+    public float kandiHits;
+
     public GameObject resultsScreen;
-    public Text percentHitText, normalsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
+    public Text kandiResultsText, percentHitText, normalsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
 
 
 
@@ -70,6 +73,11 @@ public class GameManager : MonoBehaviour
                 goodsText.text = goodHits.ToString();
                 perfectsText.text = perfectHits.ToString();
                 missesText.text = missedHits.ToString();
+                kandiText.text = kandiHits.ToString();                
+                kandiResultsText.text = kandiHits.ToString();
+                PlayerPrefs.SetInt("kandi", (int)kandiHits);
+
+
 
                 float totalHit = normalHits + goodHits + perfectHits;
                 float percentHit = (totalHit/totalNotes) * 100f;
@@ -107,10 +115,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void KandiHit()
-    {
-        currentKandi += 1;
-        kandiText.text = "Kandi: x" + currentKandi;
-    }
+{
+    currentKandi += 1;
+    kandiText.text = "Kandi: x" + currentKandi;
+    kandiHits = currentKandi; // Update kandiHits variable
+}
+
 
     public void NoteHit()
     {

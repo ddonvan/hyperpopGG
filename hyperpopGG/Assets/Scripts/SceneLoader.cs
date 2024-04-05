@@ -16,4 +16,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("SongSelection");
     }
 
+    public void LoadStore()
+    {
+        SceneManager.LoadScene("SongStore");
+    }
+    
+    
+
 }
